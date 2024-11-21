@@ -11,6 +11,7 @@ import { Link } from "react-router-dom"
 import { CaretLeft, PencilLine } from "@phosphor-icons/react"
 import { QuizChagas } from "../../components/QuizChagas"
 import { useState } from "react"
+import { Footer } from "../../components/Footer"
 
 export function Chagas() {
 
@@ -31,7 +32,7 @@ export function Chagas() {
                 </div>
             </header>
         
-            <article className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg">
+            <article className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mb-5">
                 <header className="mb-8">
                     <h1 className="text-3xl font-bold text-green-700 mb-4">Introdução</h1>
                     <p className="text-gray-700 text-lg">
@@ -128,10 +129,12 @@ export function Chagas() {
             </article>
 
             {isQuizOpen && (
-                <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-5">
+                <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-5 mb-5">
                     <QuizChagas/>
                 </div>
             )}
+
+        <Footer/>
         </>
     )
 }

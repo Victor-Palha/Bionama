@@ -3,6 +3,7 @@ import malaria from "../../assets/malaria.jpeg"
 import chagas from "../../assets/chagas.jpeg"
 
 import { Link } from "react-router-dom";
+import { Footer } from "../../components/Footer";
 
 export function Home(){
     return (
@@ -49,6 +50,7 @@ export function Home(){
                     </div>
                 </section>
             </main>
+            <Footer/>
         </>
     )
 }

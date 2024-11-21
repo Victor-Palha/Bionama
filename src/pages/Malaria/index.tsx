@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 import { CaretLeft, PencilLine } from "@phosphor-icons/react"
 import { useState } from "react"
 import { QuizMalaria } from "../../components/QuizMalaria"
+import { Footer } from "../../components/Footer"
 
 export function Malaria() {
 
@@ -127,6 +128,7 @@ export function Malaria() {
                     <QuizMalaria/>
                 </div>
             )}
+            <Footer/>
         </>
     )
 }

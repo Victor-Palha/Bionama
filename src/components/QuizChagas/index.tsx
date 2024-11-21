@@ -79,7 +79,7 @@ export function QuizChagas() {
         <div className="mt-6 bg-white p-4 rounded shadow-md">
           <h3 className="text-xl font-bold text-green-700">Resultados:</h3>
           {questions.map((q, index) => (
-            <p key={q.id} className="text-lg text-gray-700">
+            <p key={q.id} className="text-lg text-gray-700 my-2">
               {q.id}. {q.question} -{" "}
               <span
                 className={

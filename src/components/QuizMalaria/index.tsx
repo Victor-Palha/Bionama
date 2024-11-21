@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 export function QuizMalaria() {
   const [answers, setAnswers] = useState<string[]>([]);
@@ -51,6 +51,17 @@ export function QuizMalaria() {
         correctAnswer:
             "Essa doença é transmitida pela picada do mosquito macho Anopheles.",
     },
+    {
+      id: 5,
+      question: "Assinale verdadeiro V ou falso F para as afirmativas,  a seguir :\n\n( ) a fêmea do gênero Anofheles, se alimenta de seiva.\n( ) a forma de infecção pela doença de chagas é por via oral ou através da picada e contato com fezes do triatomídeo. \n( ) a infecção por malária é através da picada e contato com a saliva do mosquito Anofheles.\n( )  a doença de chagas é a malária tem como vetores invertebrados.",
+      options: [
+          "V, F, F, V.",
+          "F, V, V, F.",
+          "F, F, V, V.",
+          "V, V, F, F.",
+      ],
+      correctAnswer: "F, F, V, V.",
+    }
   ];
   
 
@@ -69,23 +80,31 @@ export function QuizMalaria() {
     <div className="mt-10 p-6 bg-gray-100 rounded-lg shadow-md">
       <h2 className="text-2xl font-bold text-green-700 mb-6">Questionário</h2>
       <form onSubmit={(e) => e.preventDefault()}>
-        {questions.map((q, index) => (
+      {questions.map((q, index) => (
           <div key={q.id} className="mb-6">
-            <p className="text-lg font-semibold text-gray-700">{`${q.id}. ${q.question}`}</p>
-              <div className="space-y-2 mt-2">
-                {q.options.map((option) => (
-                  <label key={option} className="block">
-                    <input
-                      type="radio"
-                      name={`question-${index}`}
-                      value={option}
-                      onChange={() => handleChange(index, option)}
-                      className="mr-2"
-                    />
-                    {option}
-                  </label>
-                ))}
-                </div>
+            <p className="text-lg font-semibold text-gray-700">
+              {`${q.id}. `}
+              {q.question.split("\n").map((line, idx) => (
+                <React.Fragment key={idx}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}
+            </p>
+            <div className="space-y-2 mt-2">
+              {q.options.map((option) => (
+                <label key={option} className="block">
+                  <input
+                    type="radio"
+                    name={`question-${index}`}
+                    value={option}
+                    onChange={() => handleChange(index, option)}
+                    className="mr-2"
+                  />
+                  {option}
+                </label>
+              ))}
+            </div>
           </div>
         ))}
         <button
@@ -101,7 +120,7 @@ export function QuizMalaria() {
         <div className="mt-6 bg-white p-4 rounded shadow-md">
           <h3 className="text-xl font-bold text-green-700">Resultados:</h3>
           {questions.map((q, index) => (
-            <p key={q.id} className="text-lg text-gray-700">
+            <p key={q.id} className="text-lg text-gray-700 my-2">
               {q.id}. {q.question} -{" "}
               <span
                 className={
