@@ -36,12 +36,11 @@ export function Chagas() {
                 <header className="mb-8">
                     <h1 className="text-3xl font-bold text-green-700 mb-4">Introdução</h1>
                     <p className="text-gray-700 text-lg">
-                    A doença de Chagas é causada por um agente etiológico, denominado *Trypanossoma cruzi*, descoberto em aproximadamente 1909, por Carlos. Ela possui como vetor um invertebrado, sendo um besouro fêmea do gênero *Triatoma*, mais popularmente conhecido na região Amazônica como barbeiro, responsável por transmitir a doença de Chagas para os seres humanos e vertebrados.
+                    A doença de Chagas é causada por um agente etiológico, denominado <span className="italic">Trypanossoma cruzi</span>, descoberto em aproximadamente 1909, por Carlos. Ela possui como vetor um invertebrado, sendo um besouro fêmea do gênero <span className="italic">Triatoma</span>, mais popularmente conhecido na região Amazônica como barbeiro, responsável por transmitir a doença de Chagas para os seres humanos e vertebrados.
                     </p>
                 </header>
 
                 <section className="mb-6">
-                    {/* <h2 className="text-2xl font-semibold text-green-600 mb-3">Imagens</h2> */}
                     <div className="flex flex-wrap gap-4 items-center justify-center md:flex-nowrap">
                         <img src={carlos} alt="Carlos Chagas" className="w-[300px] max-w-[300px] h-[300px] max-h-[300px] rounded-lg shadow-md" />
                         <img src={barbeiro} alt="Barbeiro" className="w-[300px] max-w-[300px] h-[300px] max-h-[300px] rounded-lg shadow-md" />
@@ -58,12 +57,11 @@ export function Chagas() {
                 <section className="mb-6">
                     <h2 className="text-2xl font-semibold text-green-600 mb-3">Contaminação pelo triatomídeo</h2>
                     <p className="text-gray-700 text-lg">
-                    O ser humano, ao ser picado pela fêmea do triatomídeo infectado, é exposto ao agente etiológico *Trypanossoma cruzi*. Durante o repasto sanguíneo, o inseto libera substâncias anestésicas, tornando sua presença imperceptível. Após a alimentação, o triatomídeo excreta fezes contendo a forma tripomastigota, que entra na corrente sanguínea do hospedeiro quando o local é coçado.
+                    O ser humano, ao ser picado pela fêmea do triatomídeo infectado, é exposto ao agente etiológico <span className="italic">Trypanossoma cruzi</span>. Durante o repasto sanguíneo, o inseto libera substâncias anestésicas, tornando sua presença imperceptível. Após a alimentação, o triatomídeo excreta fezes contendo a forma tripomastigota, que entra na corrente sanguínea do hospedeiro quando o local é coçado.
                     </p>
                 </section>
 
                 <section className="mb-6">
-                    {/* <h2 className="text-2xl font-semibold text-green-600 mb-3">Imagens</h2> */}
                     <div className="flex flex-wrap gap-4 items-center justify-center">
                         <img src={trasmi} alt="Transmissão" className="w-[200px] max-w-[200px] h-[200px] max-h-[200px] rounded-lg shadow-md" />
                         <img src={idk} alt="Transmissão" className="w-[200px] max-w-[200px] h-[200px] max-h-[200px] rounded-lg shadow-md" />
@@ -87,7 +85,7 @@ export function Chagas() {
                 <section className="mb-6">
                     <h2 className="text-2xl font-semibold text-green-600 mb-3">Ciclo no hospedeiro intermediário</h2>
                     <p className="text-gray-700 text-lg">
-                    O ciclo no triatomídeo fêmea ocorre quando ela se alimenta de um hospedeiro infectado. Nesse processo, a forma epimastigota do *Trypanossoma cruzi* é ingerida e alojada no trato digestivo do inseto, onde permanece sem desenvolver o ciclo de vida completo.
+                    O ciclo no triatomídeo fêmea ocorre quando ela se alimenta de um hospedeiro infectado. Nesse processo, a forma epimastigota do <span className="italic">Trypanossoma cruzi</span> é ingerida e alojada no trato digestivo do inseto, onde permanece sem desenvolver o ciclo de vida completo.
                     </p>
                 </section>
 
